@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مستخلصات ديوان المعاني — أبو هلال العسكري</title>
+  <meta name="theme-color" content="#7C2D12" />
+  <meta name="application-name" content="ديوان المعاني" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="ديوان المعاني" />
+  <link id="appIconLink" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%237C2D12'/%3E%3Cstop offset='100%25' stop-color='%23B45309'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='112' fill='url(%23g)'/%3E%3Cpath d='M256 152v220M256 152c-28-20-64-28-104-28v220c40 0 76 8 104 28m0-220c28-20 64-28 104-28v220c-40 0-76 8-104 28' fill='none' stroke='%23FFFDF9' stroke-width='28' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link id="appleTouchIcon" rel="apple-touch-icon" href="" />
+  <link id="appManifestLink" rel="manifest" href="" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --reading-font-size: 18px;
+      --font-body: 'IBM Plex Sans Arabic', 'Cairo', Tahoma, Arial, sans-serif;
+      --font-poetry: 'IBM Plex Sans Arabic', 'Cairo', Tahoma, Arial, sans-serif;
+      --bg-parchment: #FAF6EE;
+      --bg-card: #FFFDF9;
+      --ink-primary: #1F1A14;
+      --ink-muted: #5C5248;
+      --accent-burgundy: #7C2D12;
+      --accent-gold: #B45309;
+      --border-warm: #E7DEC8;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-parchment);
+      color: var(--ink-primary);
+      overflow-x: hidden;
+    }
+
+    .font-poetry {
+      font-family: var(--font-poetry);
+    }
+
+    .reading-text {
+      font-size: var(--reading-font-size);
+      line-height: 1.95;
+    }
+
+    .poetry-bayt {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+      padding: 0.5rem 0.75rem;
+      border-right: 3px solid #D97706;
+      background: #FEF9EC;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .poetry-bayt {
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    .bookmark-pulse {
+      animation: pulseGlow 2.2s ease-out 1;
+      box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.55);
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 6px rgba(217, 119, 6, 0.7); }
+      100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0); }
+    }
+
+    /* Custom subtle scrollbar */
+    ::-webkit-scrollbar { width: 7px; height: 7px; }
+    ::-webkit-scrollbar-track { background: #F3ECE0; }
+    ::-webkit-scrollbar-thumb { background: #C8B89D; border-radius: 999px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Sticky Top Bar & Pinned Chapters -->
+  <div class="sticky top-0 z-30 bg-[#FFFDF9]/95 backdrop-blur border-b border-[#E7DEC8] shadow-sm">
+  <header class="border-b border-[#F0E8D8]">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3">
+      <!-- Brand / Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#7C2D12] to-[#B45309] text-white flex items-center justify-center shadow-sm shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-lg sm:text-xl font-bold text-[#7C2D12] leading-tight">ديوان المعاني</h1>
+          <p class="text-xs text-[#5C5248]">أبو هلال العسكري (ت نحو ٣٩٥هـ) — مستخلصات الأبواب والمواضيع</p>
+        </div>
+      </div>
+
+      <!-- Controls Toolbar -->
+      <div class="flex flex-wrap items-center gap-2">
+        <!-- Font Family Control -->
+        <div class="flex items-center bg-[#F3ECE0] rounded-lg px-2 py-1 border border-[#E7DEC8]">
+          <label for="fontFamilySelect" class="text-xs text-[#5C5248] ml-1.5 hidden sm:inline">نوع الخط:</label>
+          <select id="fontFamilySelect" aria-label="نوع الخط" class="bg-transparent text-xs font-semibold text-[#1F1A14] focus:outline-none cursor-pointer py-0.5">
+            <option value="ibm">IBM Plex Sans Arabic</option>
+            <option value="cairo">Cairo (القاهرة)</option>
+            <option value="tajawal">Tajawal (تجوال)</option>
+            <option value="readex">Readex Pro</option>
+            <option value="amiri">Amiri (الأميري التراثي)</option>
+          </select>
+        </div>
+
+        <!-- Font Size Control (16 - 18 - 20) -->
+        <div class="flex items-center bg-[#F3ECE0] rounded-lg p-1 border border-[#E7DEC8]" role="group" aria-label="حجم الخط">
+          <span class="text-xs text-[#5C5248] px-2 hidden sm:inline">الخط:</span>
+          <button type="button" data-font="16" class="font-btn px-2.5 py-1 text-xs font-semibold rounded-md transition">16</button>
+          <button type="button" data-font="18" class="font-btn px-2.5 py-1 text-xs font-semibold rounded-md transition">18</button>
+          <button type="button" data-font="20" class="font-btn px-2.5 py-1 text-xs font-semibold rounded-md transition">20</button>
+        </div>
+
+        <!-- Resume Reading Position Button -->
+        <button type="button" id="resumeReadingBtn" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-amber-50 text-[#92400E] border border-amber-300 hover:bg-amber-100 transition">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+          </svg>
+          <span id="resumeReadingLabel">العودة لمكان القراءة</span>
+        </button>
+
+        <!-- Export Markdown Button -->
+        <button type="button" id="openExportBtn" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-[#7C2D12] text-white hover:bg-[#5E210C] transition shadow-sm">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          <span>تصدير Markdown</span>
+          <span id="savedCountBadge" class="bg-white/20 px-1.5 py-0.5 rounded text-[11px]">0</span>
+        </button>
+
+        <!-- Book Index Button -->
+        <button type="button" id="openIndexBtn" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-white text-[#5C5248] border border-[#E7DEC8] hover:bg-[#F3ECE0] transition">
+          <span>فهرس الكتاب</span>
+        </button>
+
+        <!-- Install as Web App Button -->
+        <button type="button" id="installAppBtn" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-emerald-50 text-emerald-800 border border-emerald-300 hover:bg-emerald-100 transition" title="تثبيت الصفحة كتطبيق بأيقونة مستقلة">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          <span>تثبيت كتطبيق</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Pinned Extracted Chapters Bar -->
+  <div class="bg-[#FAF6EE]/95">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-2 flex items-center gap-2">
+      <span class="text-xs font-bold text-[#7C2D12] shrink-0">الأبواب المستخلصة:</span>
+      <nav id="chapterNav" class="flex items-center gap-1.5 overflow-x-auto pb-0.5 flex-1">
+        <!-- Populated dynamically -->
+      </nav>
+      <button type="button" id="resetFiltersBtn" class="text-xs font-semibold text-[#B45309] hover:underline shrink-0 px-2">عرض الكل</button>
+    </div>
+  </div>
+  </div>
+
+  <!-- Main Content Layout -->
+  <div class="max-w-7xl w-full mx-auto px-3 sm:px-6 py-6 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+    <!-- Sidebar: Chapters (Desktop) + Quick Collections -->
+    <aside class="lg:col-span-3 space-y-5">
+      <!-- View Mode Tabs -->
+      <div class="bg-[#FFFDF9] rounded-2xl border border-[#E7DEC8] p-3 shadow-sm">
+        <h2 class="text-xs font-bold text-[#5C5248] mb-2 px-1">عرض المستخلصات</h2>
+        <div class="grid grid-cols-3 lg:grid-cols-1 gap-1.5">
+          <button type="button" data-collection="all" class="collection-btn flex items-center justify-between px-3 py-2 rounded-xl text-sm font-medium transition text-right">
+            <span>جميع المستخلصات</span>
+            <span id="countAll" class="text-xs px-2 py-0.5 rounded-full bg-[#F3ECE0]">0</span>
+          </button>
+          <button type="button" data-collection="saved" class="collection-btn flex items-center justify-between px-3 py-2 rounded-xl text-sm font-medium transition text-right">
+            <span>المحفوظة للتصدير</span>
+            <span id="countSaved" class="text-xs px-2 py-0.5 rounded-full bg-[#F3ECE0]">0</span>
+          </button>
+          <button type="button" data-collection="starred" class="collection-btn flex items-center justify-between px-3 py-2 rounded-xl text-sm font-medium transition text-right">
+            <span>المميزة بنجمة ★</span>
+            <span id="countStarred" class="text-xs px-2 py-0.5 rounded-full bg-[#F3ECE0]">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Source Note -->
+      <div class="hidden lg:block bg-[#F7F1E5] rounded-2xl border border-[#E7DEC8] p-4 text-xs text-[#5C5248] leading-relaxed">
+        <p class="font-bold text-[#7C2D12] mb-1">توثيق النصوص</p>
+        <p>جميع الشواهد والأبيات والحكم مستخلصة نصياً من طبعة المكتبة الشاملة لكتاب «ديوان المعاني» لأبي هلال العسكري.</p>
+      </div>
+    </aside>
+
+    <!-- Main Reading & Extraction Area -->
+    <main class="lg:col-span-9 space-y-5 min-w-0">
+
+      <!-- Search + Type Filter Bar -->
+      <section class="bg-[#FFFDF9] rounded-2xl border border-[#E7DEC8] p-4 shadow-sm space-y-3">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <div class="relative flex-1">
+            <input id="searchInput" type="search" placeholder="ابحث في الأبيات، الشواهد، الحكم، أسماء الشعراء..." class="w-full pr-10 pl-4 py-2.5 rounded-xl bg-[#FAF6EE] border border-[#E7DEC8] text-sm focus:outline-none focus:ring-2 focus:ring-[#B45309]/40 focus:border-[#B45309]" />
+            <svg class="w-4 h-4 text-[#5C5248] absolute right-3.5 top-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </div>
+          <div id="typeFilters" class="flex flex-wrap items-center gap-1.5">
+            <button type="button" data-type="all" class="type-btn px-3 py-2 rounded-xl text-xs font-semibold transition">الكل</button>
+            <button type="button" data-type="بيت" class="type-btn px-3 py-2 rounded-xl text-xs font-semibold transition">أبيات شعرية</button>
+            <button type="button" data-type="شاهد" class="type-btn px-3 py-2 rounded-xl text-xs font-semibold transition">شواهد</button>
+            <button type="button" data-type="حكمة" class="type-btn px-3 py-2 rounded-xl text-xs font-semibold transition">حكم وأمثال</button>
+            <button type="button" data-type="فائدة" class="type-btn px-3 py-2 rounded-xl text-xs font-semibold transition">فوائد نقدية</button>
+          </div>
+        </div>
+
+        <!-- Topic Pills (Dynamic for selected chapter) -->
+        <div id="topicFilterWrap" class="flex flex-wrap items-center gap-1.5 pt-2 border-t border-[#F0E8D8]">
+          <span class="text-xs text-[#5C5248] ml-1">الموضوع:</span>
+          <div id="topicPills" class="flex flex-wrap gap-1.5"></div>
+        </div>
+      </section>
+
+      <!-- Active Status Banner -->
+      <div class="flex flex-wrap items-center justify-between gap-2 px-1">
+        <div class="text-sm text-[#5C5248]">
+          عرض <span id="visibleCount" class="font-bold text-[#7C2D12]">0</span> مستخلص
+          <span id="activeFilterSummary" class="text-xs text-[#786D61]"></span>
+        </div>
+        <div id="bookmarkBanner" class="hidden text-xs bg-amber-50 text-[#92400E] border border-amber-200 px-3 py-1 rounded-full">
+          موضع القراءة المحفوظ: <span id="bookmarkBannerText" class="font-semibold"></span>
+        </div>
+      </div>
+
+      <!-- Cards Container -->
+      <div id="cardsContainer" class="space-y-4">
+        <!-- Populated dynamically -->
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="hidden bg-[#FFFDF9] rounded-2xl border border-[#E7DEC8] p-10 text-center space-y-3">
+        <p class="text-lg font-bold text-[#7C2D12]">لا توجد مستخلصات مطابقة</p>
+        <p class="text-sm text-[#5C5248]">جرّب تغيير كلمات البحث أو إزالة الفلاتر الحالية.</p>
+        <button type="button" id="emptyResetBtn" class="px-4 py-2 rounded-xl bg-[#7C2D12] text-white text-sm font-medium hover:bg-[#5E210C] transition">إعادة ضبط الفلاتر</button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Export Markdown Modal -->
+  <div id="exportModal" class="hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-[#FFFDF9] rounded-2xl border border-[#E7DEC8] max-w-2xl w-full max-h-[88vh] flex flex-col shadow-xl">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-[#E7DEC8]">
+        <div>
+          <h3 class="text-lg font-bold text-[#7C2D12]">تصدير الفوائد بصيغة Markdown</h3>
+          <p class="text-xs text-[#5C5248]">اختر المجموعة التي ترغب في تصديرها أو نسخها</p>
+        </div>
+        <button type="button" id="closeExportBtn" class="p-1.5 rounded-lg hover:bg-[#F3ECE0] text-[#5C5248]" aria-label="إغلاق">✕</button>
+      </div>
+
+      <div class="px-5 py-3 bg-[#FAF6EE] border-b border-[#E7DEC8] flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <button type="button" id="exportSourceSaved" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition">المحفوظة</button>
+          <button type="button" id="exportSourceStarred" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition">المميزة بنجمة</button>
+        </div>
+        <span id="exportItemCount" class="text-xs font-medium text-[#5C5248]"></span>
+      </div>
+
+      <div class="p-5 overflow-y-auto flex-1">
+        <textarea id="markdownPreview" readonly rows="12" class="w-full rounded-xl bg-[#FAF6EE] border border-[#E7DEC8] p-3 text-xs sm:text-sm font-mono leading-relaxed focus:outline-none" dir="rtl"></textarea>
+      </div>
+
+      <div class="px-5 py-4 border-t border-[#E7DEC8] flex flex-wrap items-center justify-end gap-2">
+        <button type="button" id="copyMarkdownBtn" class="px-4 py-2 rounded-xl border border-[#E7DEC8] bg-white hover:bg-[#F3ECE0] text-sm font-medium transition">نسخ النص (Markdown)</button>
+        <button type="button" id="downloadMarkdownBtn" class="px-4 py-2 rounded-xl bg-[#7C2D12] hover:bg-[#5E210C] text-white text-sm font-medium transition">تنزيل ملف .md</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Share Modal (Fallback when Web Share API is unavailable) -->
+  <div id="shareModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+    <div class="bg-[#FFFDF9] rounded-2xl border border-[#E7DEC8] max-w-lg w-full p-5 space-y-4 shadow-xl">
+      <div class="flex items-center justify-between">
+        <h3 class="text-base font-bold text-[#7C2D12]">مشاركة المستخلص</h3>
+        <button type="button" id="closeShareBtn" class="p-1 rounded-lg hover:bg-[#F3ECE0] text-[#5C5248]" aria-label="إغلاق">✕</button>
+      </div>
+      <textarea id="shareTextArea" readonly rows="6" class="w-full rounded-xl bg-[#FAF6EE] border border-[#E7DEC8] p-3 text-sm leading-relaxed focus:outline-none"></textarea>
+      <div class="flex flex-wrap justify-end gap-2">
+        <a id="shareWhatsappLink" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-emerald-700 text-white text-xs sm:text-sm font-medium hover:bg-emerald-800 transition">مشاركة عبر واتساب</a>
+        <button type="button" id="copyShareBtn" class="px-4 py-2 rounded-xl bg-[#7C2D12] text-white text-xs sm:text-sm font-medium hover:bg-[#5E210C] transition">نسخ النص</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full 12-Chapter Book Index Modal -->
+  <div id="indexModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+    <div class="bg-[#FFFDF9] rounded-2xl border border-[#E7DEC8] max-w-2xl w-full max-h-[85vh] flex flex-col shadow-xl">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-[#E7DEC8]">
+        <h3 class="text-lg font-bold text-[#7C2D12]">فهرس أبواب «ديوان المعاني» الاثني عشر</h3>
+        <button type="button" id="closeIndexBtn" class="p-1.5 rounded-lg hover:bg-[#F3ECE0] text-[#5C5248]" aria-label="إغلاق">✕</button>
+      </div>
+      <div class="p-5 overflow-y-auto space-y-3 text-sm leading-relaxed">
+        <p class="text-xs text-[#5C5248]">قسّم أبو هلال العسكري كتابه «ديوان المعاني» إلى اثني عشر باباً، جمعت في هذا التطبيق النصوص المحققة المستخلصة من الأبواب الرئيسية المتاحة:</p>
+        <ol class="list-decimal list-inside space-y-1.5 text-[#1F1A14]">
+          <li><strong>الباب الأول:</strong> في المبالغة في المديح والتهاني والافتخار (متوفر في التطبيق)</li>
+          <li><strong>الباب الثاني:</strong> في أوصاف خصال الإنسان المحمودة وأصدق بيت والصبر (متوفر في التطبيق)</li>
+          <li><strong>الباب الثالث:</strong> في المعاتبات والهجاء والاعتذار (متوفر في التطبيق)</li>
+          <li><strong>الباب الرابع:</strong> في التشبب وأوصاف الحسان والعيون والثغر (متوفر في التطبيق)</li>
+          <li><strong>الباب الخامس:</strong> في صفات النار والطبخ وألوان الطعام والشراب (متوفر في التطبيق)</li>
+          <li><strong>الباب السادس:</strong> في وصف السماء والنجوم والليل والصبح والشمس والقمر (متوفر في التطبيق)</li>
+          <li><strong>الباب السابع:</strong> في صفة السحاب والمطر والبرق والرعد والرياض والمياه (متوفر في التطبيق)</li>
+          <li><strong>الباب الثامن:</strong> في صفات الحرب والسلاح والطعن والضرب</li>
+          <li><strong>الباب التاسع:</strong> في صفة الخط والقلم والدواة والقرطاس وذكر البلاغة (متوفر في التطبيق)</li>
+          <li><strong>الباب العاشر:</strong> في صفات الخيل والإبل والسير والفلوات والوحوش والطيور</li>
+          <li><strong>الباب الحادي عشر:</strong> في صفة الشباب والشيب والخضاب والعلل والمراثي والزهد</li>
+          <li><strong>الباب الثاني عشر:</strong> في صفة أشياء مختلفة (الحنين إلى الأوطان، مدح الإخوان، فضل الوعد، انتظار الفرج)</li>
+        </ol>
+        <div class="pt-3 border-t border-[#E7DEC8] text-xs text-[#5C5248] flex flex-wrap gap-3">
+          <span>المصادر الموثقة:</span>
+          <a href="https://ddl.ae/uploads/books/234.html" target="_blank" rel="noopener noreferrer" class="text-[#7C2D12] underline">مركز المعرفة الرقمي</a>
+          <a href="https://ketabonline.com/ar/books/5435" target="_blank" rel="noopener noreferrer" class="text-[#7C2D12] underline">جامع الكتب الإسلامية</a>
+          <a href="https://alantologia.com/page/15796/" target="_blank" rel="noopener noreferrer" class="text-[#7C2D12] underline">الأنطولوجيا</a>
+          <a href="https://qaf.ai/ar/books/diwan-al-ma-ani" target="_blank" rel="noopener noreferrer" class="text-[#7C2D12] underline">قاف</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Install as Web App Modal -->
+  <div id="installModal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+    <div class="bg-[#FFFDF9] rounded-2xl border border-[#E7DEC8] max-w-lg w-full p-5 space-y-4 shadow-xl">
+      <div class="flex items-center justify-between border-b border-[#E7DEC8] pb-3">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#7C2D12] to-[#B45309] text-white flex items-center justify-center shadow-sm shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-[#7C2D12]">تشغيل «ديوان المعاني» كتطبيق بأيقونة</h3>
+            <p class="text-xs text-[#5C5248]">أيقونة مستقلة ونافذة قراءة بدون أشرطة المتصفح</p>
+          </div>
+        </div>
+        <button type="button" id="closeInstallBtn" class="p-1.5 rounded-lg hover:bg-[#F3ECE0] text-[#5C5248]" aria-label="إغلاق">✕</button>
+      </div>
+
+      <div id="nativeInstallWrap" class="hidden bg-emerald-50 border border-emerald-200 rounded-xl p-3 flex items-center justify-between gap-3">
+        <span class="text-xs sm:text-sm text-emerald-900 font-medium">متصفحك يدعم التثبيت المباشر الآن:</span>
+        <button type="button" id="triggerNativeInstallBtn" class="px-3.5 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs sm:text-sm font-semibold shrink-0 transition">تثبيت الآن</button>
+      </div>
+
+      <div class="space-y-2.5 text-xs sm:text-sm text-[#1F1A14] leading-relaxed">
+        <div class="bg-[#FAF6EE] border border-[#E7DEC8] rounded-xl p-3">
+          <p class="font-bold text-[#7C2D12] mb-1">على الكمبيوتر (Chrome / Edge):</p>
+          <p>افتح الملف في المتصفح ثم من القائمة (<strong>⋮</strong>) اختر <strong>حفظ ومشاركة ← إنشاء اختصار</strong> (أو <strong>تثبيت الصفحة كتطبيق</strong>) وفعّل خيار <strong>«فتح كنافذة»</strong> لتظهر أيقونة مستقلة على سطح المكتب.</p>
+        </div>
+        <div class="bg-[#FAF6EE] border border-[#E7DEC8] rounded-xl p-3">
+          <p class="font-bold text-[#7C2D12] mb-1">على الآيفون والآيباد (Safari):</p>
+          <p>اضغط زر المشاركة <strong>⎙</strong> في الأسفل ثم اختر <strong>«إضافة إلى الشاشة الرئيسية»</strong>.</p>
+        </div>
+        <div class="bg-[#FAF6EE] border border-[#E7DEC8] rounded-xl p-3">
+          <p class="font-bold text-[#7C2D12] mb-1">على الأندرويد (Chrome):</p>
+          <p>من القائمة (<strong>⋮</strong>) اختر <strong>«تثبيت التطبيق»</strong> أو <strong>«إضافة إلى الشاشة الرئيسية»</strong>.</p>
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-1">
+        <button type="button" id="closeInstallDoneBtn" class="px-4 py-2 rounded-xl bg-[#7C2D12] text-white text-xs sm:text-sm font-medium hover:bg-[#5E210C] transition">حسناً</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button
+    type="button"
+    id="backToTopBtn"
+    aria-label="العودة للأعلى"
+    title="العودة للأعلى"
+    class="fixed bottom-5 left-5 z-40 w-11 h-11 rounded-full bg-[#7C2D12] hover:bg-[#5E210C] text-white shadow-lg border border-amber-200/30 flex items-center justify-center opacity-0 pointer-events-none translate-y-3 transition-all duration-200"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden bg-[#1F1A14] text-white text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-lg transition-opacity"></div>
+
+  <script>
+    const CHAPTERS = [
+      { id: 'all', title: 'جميع الأبواب' },
+      { id: 'ch1', title: 'الباب ١: المديح والافتخار' },
+      { id: 'ch2', title: 'الباب ٢: الخصال المحمودة' },
+      { id: 'ch3', title: 'الباب ٣: المعاتبات والهجاء' },
+      { id: 'ch4', title: 'الباب ٤: التشبب والحسان' },
+      { id: 'ch5', title: 'الباب ٥: النار والطعام' },
+      { id: 'ch6', title: 'الباب ٦: السماء والليل' },
+      { id: 'ch7', title: 'الباب ٧: السحاب والرياض' },
+      { id: 'ch9', title: 'الباب ٩: الخط والقلم' }
+    ];
+
+    const EXTRACTS = [
+      // الباب الأول: المديح والافتخار والتهاني
+      {
+        id: 'ex-101',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'النابغة الذبياني',
+        verses: [
+          ['ألم تَرَ أنّ اللَّهَ أعطاكَ سُورةً', 'تَرى كلَّ مَلْكٍ دُونها يَتَذَبْذَبُ'],
+          ['بأنك شمسٌ والملوكُ كواكبٌ', 'إذا طلعتْ لم يَبْدُ منهنَّ كوكبُ']
+        ],
+        note: 'أمدح بيت قالته العرب عند أبي أحمد العسكري؛ إذ فضّل النابغةُ النعمانَ على الملوك كفضل الشمس على الكواكب.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-102',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'النابغة الذبياني',
+        verses: [
+          ['ولستُ بمُسْتَبقٍ أخاً لا تلمُّهُ', 'على شَعَثٍ أيُّ الرجالِ المهذَّبُ؟']
+        ],
+        note: 'أورده العسكري في سياق اعتذار النابغة للنعمان، وجرى مجرى المثل السائر في التماس العذر للإخوان.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-103',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'أبو تمام',
+        verses: [
+          ['هوَ البحرُ مِن أيِّ النواحِي أتَيته', 'فَلُجَّتُهُ المعروفُ والجودُ ساحِلُهْ'],
+          ['تعوَّدَ بَسطَ الكفِّ حتى لو أنَّهُ', 'أرادَ انقباضاً لم تُطِعْهُ أنامِلهْ']
+        ],
+        note: 'من الغلو المشهور المستفيض الذي قبله الناس واستحسنوه ورووه بكل لسان في مدح المعتصم.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-104',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'زهير بن أبي سلمى',
+        verses: [
+          ['تراهُ إذا ما جِئتَهُ مُتهلِّلاً', 'كأنك تُعطِيهِ الذِي أنتَ سائِلُهْ']
+        ],
+        note: 'عدّه العسكري أجود ما قيل في الشعر القديم في طلاقة وجه الكريم وبشاشته عند السؤال.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-105',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'جرير',
+        verses: [
+          ['ألَسْتم خيرَ مَن رَكبَ المطايا', 'وأندَى العالمينَ بُطونَ راحِ']
+        ],
+        note: 'استفهام تقريري لا للشك، وعدّه العلماء أمدح بيت قالته العرب، ونظيره في القرآن: «أليس الله بأحكم الحاكمين».',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-106',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'الخنساء',
+        verses: [
+          ['وإنَّ صخراً لمولانا وسيدنا', 'وإنَّ صخراً إذا يشتو لنحَّارُ'],
+          ['أغرُّ أبلجُ تأتمُّ الهداةُ به', 'كأنه علمٌ في رأسه نارُ']
+        ],
+        note: 'اختاره المفضل الضبي للمهدي بوصفه أمدح بيت قالته العرب؛ شبهت أخاها بالجبل ثم جعلت في رأسه ناراً.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-107',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'الحطيئة',
+        verses: [
+          ['متى تأتهِ تَعشو إلى ضوءِ نارهِ', 'تجدْ خيرَ نارٍ عندها خيرُ مُوقدِ']
+        ],
+        note: 'من أمدح أبيات العرب في الكرم وإيقاد نار القرى للضيفان.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-108',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'أبو تمام',
+        verses: [
+          ['لولا اشتعالُ النارِ فيما جاورَتْ', 'ما كان يُعرفُ طيبُ عَرْفِ العودِ']
+        ],
+        note: 'في معنى أن المحسودين على النعمة لا يظهر فضلهم وطيب أثرهم إلا مع ابتلاء الحاسدين لهم.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-109',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'بيت',
+        author: 'أبو العميثل',
+        verses: [
+          ['أصدق وعفَّ وجُدْ وأنصتْ واحتمِلْ', 'واصفح وكافِ ودارِ واحلُمْ واشْجُعِ']
+        ],
+        note: 'أجمع بيت قيل في المديح؛ جمع فيه الشاعر عشر خصال من خصال الكمال في بيت واحد لعبد الله بن طاهر.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-110',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'المديح',
+        type: 'فائدة',
+        author: 'أبو هلال العسكري',
+        text: 'وقولُ القائل: «أجودُ ما قيل في التواضع مع علوِّ الرتبة» قولُ البحتري: دنوتَ تواضعاً وعلوتَ قدراً / فحالاك: انحدارٌ وارتفاعُ * كذاك الشمسُ تبعدُ أن تُسامى / ويدنو الضوءُ منها والشعاعُ.',
+        note: 'فائدة بلاغية في الجمع بين الضدين (الدنو والعلو) عبر التمثيل بالشمس وضوئها.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-111',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'الافتخار',
+        type: 'بيت',
+        author: 'امرؤ القيس',
+        verses: [
+          ['فلو أنّ ما أسعى لأدنى مَعيشةٍ', 'كفاني ولم أطلبْ قليلٌ من المالِ'],
+          ['ولكنني أسعى لمجدٍ مُؤثَّلٍ', 'وقد يُدرِكُ المجدَ المؤثَّلَ أمثالي']
+        ],
+        note: 'اختاره الفرزدق حين سُئل عن أفخر بيت قالته الشعراء.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-112',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'الافتخار',
+        type: 'بيت',
+        author: 'السموأل',
+        verses: [
+          ['تُعيِّرُنا أنّا قليلٌ عَديدُنا', 'فقلتُ لها: إنّ الكرامَ قليلُ'],
+          ['وما ضَرَّنا أنّا قليلٌ وجارُنا', 'عزيزٌ وجارُ الأكثرينَ ذليلُ']
+        ],
+        note: 'احتج السموأل لقلة العدد بأسلوب بديع عدّه العسكري قصيدةً في الافتخار ليس لها نظير.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-113',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'الافتخار',
+        type: 'بيت',
+        author: 'عمرو بن كلثوم',
+        verses: [
+          ['ونحنُ العاصمونَ إذا أُطعنا', 'ونحنُ العارمونَ إذا عُصينا'],
+          ['ونحنُ التاركونَ لما سخطنا', 'ونحنُ الآخذونَ لما رضينا']
+        ],
+        note: 'قال العسكري: لا أعرف في افتخار الجاهلية أجود ولا أبلغ من هذين البيتين.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-114',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'الافتخار',
+        type: 'بيت',
+        author: 'أبو هلال العسكري',
+        verses: [
+          ['غنايَ غنى نفسي ومالي قناعتي', 'وكنزيَ آدابي وزيّي عفافيا'],
+          ['فمن لم تبلِّغْهُ المعاليَ نفسُهُ', 'فغيرُ جديرٍ أن ينالَ المعاليا']
+        ],
+        note: 'من افتخار المؤلف نفسه بالعلم والأدب والقناعة وعزة النفس.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-115',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'التهاني',
+        type: 'فائدة',
+        author: 'أبو هلال العسكري',
+        text: 'كانت أقسام الشعر في الجاهلية خمسة: المديح، والهجاء، والوصف، والتشبب، والمراثي، حتى زاد النابغةُ فيها قسماً سادساً وهو الاعتذار، فأحسن فيه، ولا أعرف أحداً من المحدثين بلغ مبلغه فيه إلا البحتري.',
+        note: 'فائدة تاريخية ونقدية مهمة في تطور أغراض الشعر العربي.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-116',
+        chapterId: 'ch1',
+        chapterTitle: 'الباب الأول: المديح والافتخار والتهاني',
+        topic: 'التهاني',
+        type: 'شاهد',
+        author: 'عبد الملك بن صالح للرشيد',
+        text: '«يا أمير المؤمنين! سرّك الله فيما ساءك، ولا ساءك فيما سرّك، وجعلها واحدةً بواحدة: ثواب الشاكر وأجر الصابر».',
+        note: 'قيلت حين وُلد للرشيد ابنٌ ومات له ابنٌ في ليلة واحدة، فعدّها العسكري من أعجب ما جاء في التهنئة والتعزية معاً.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+
+      // الباب الثاني: أوصاف خصال الإنسان المحمودة
+      {
+        id: 'ex-201',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الجود والإيثار',
+        type: 'بيت',
+        author: 'مسلم بن الوليد',
+        verses: [
+          ['يجودُ بالنفسِ إنْ ضَنَّ الجوادُ بها', 'والجودُ بالنفسِ أقصى غايةِ الجودِ']
+        ],
+        note: 'أجود بيت قالته العرب في غاية الجود، ومثله قول علقمة الفحل: «تجود بنفسٍ لا يُجاد بمثلها».',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-202',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الجود والإيثار',
+        type: 'شاهد',
+        author: 'القرآن الكريم — سورة الحشر',
+        text: 'قوله تعالى في مدح الأنصار: ﴿وَيُؤْثِرُونَ عَلَى أَنفُسِهِمْ وَلَوْ كَانَ بِهِمْ خَصَاصَةٌ﴾؛ قال العسكري: أفضل الجود ما كان مع الحاجة.',
+        note: 'استشهاد قرآني لتقرير أن أعلى مراتب الكرم الإيثار حال الخصاصة والحاجة.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-203',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الجود والإيثار',
+        type: 'شاهد',
+        author: 'العباس بن عبد المطلب رضي الله عنه',
+        text: '«المعروف أفضل الأمور، وأوثق الحصون، ولا يتمُّ إلا بثلاثة: تعجيله، وتصغيره، وستره؛ فإذا عجّلته هنّأته، وإذا صغّرته عظّمته، وإذا سترته تمّمته».',
+        note: 'من أجمع ما قيل في آداب إسداء المعروف.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-204',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الجود والإيثار',
+        type: 'حكمة',
+        author: 'جعفر بن يحيى البرمكي',
+        text: '«إن اللسان قد يكذب، والحال لا يكذب»؛ وقالت الحكماء: «لسان الحال أصدق من لسان الشكوى»، وقالوا: «شهادات الأحوال أعدل من شهادات الرجال».',
+        note: 'في جعل الشكر بإظهار حسن الحال أبلغ من الشكر بالقول.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-205',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الجود والإيثار',
+        type: 'حكمة',
+        author: 'صالح بن مسمار',
+        text: '«ما أدري أنعمة الله فيما بسط عليَّ أفضل، أم نعمته فيما زوى عني»؛ فجعل ما منعه الله نعمة، والناس يجعلونه محنة.',
+        note: 'من أبلغ ما سمعه العسكري في الرضا بالقسمة والشكر.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-206',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الشجاعة والإقدام',
+        type: 'بيت',
+        author: 'العباس بن مرداس السلمي',
+        verses: [
+          ['أشدُّ على الكتيبةِ لا أبالي', 'أحتفي كانَ فيها أم سواها']
+        ],
+        note: 'أشجع بيت قالته العرب، وبيّن العسكري أن الشجاعة الحقة مع التثبت والأناة لا الهوج.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-207',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الشجاعة والإقدام',
+        type: 'بيت',
+        author: 'كعب بن مالك الأنصاري',
+        verses: [
+          ['نصلُ السيوفَ إذا قَصُرنَ بخطوِنا', 'قِدْماً ونُلحِقها إذا لم تَلحَقِ']
+        ],
+        note: 'من أشجع ما قالت العرب في الإقدام وتقريب المسافة في القتال.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-208',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'أصدق بيت',
+        type: 'بيت',
+        author: 'الحطيئة',
+        verses: [
+          ['من يفعلِ الخيرَ لا يَعدمْ جوازِيَهُ', 'لا يذهبُ العرفُ بين اللَّهِ والناسِ']
+        ],
+        note: 'قال الأصمعي: أصدق بيت قالته العرب وأحكمه.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-209',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'أصدق بيت',
+        type: 'شاهد',
+        author: 'لبيد بن ربيعة (في الحديث النبوي)',
+        verses: [
+          ['أَلاَ كلُّ شيءٍ ما خلا اللهَ باطلُ', 'وكلُّ نعيمٍ لا محالةَ زائلُ']
+        ],
+        note: 'روى أبو هريرة رضي الله عنه أن رسول الله ﷺ قال: «أصدق كلمة قالتها العرب: ألا كل شيء ما خلا الله باطل».',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-210',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'أصدق بيت',
+        type: 'بيت',
+        author: 'أبو ذؤيب الهذلي',
+        verses: [
+          ['والنفسُ راغبةٌ إذا رغَّبتها', 'وإذا تُردُّ إلى قليلٍ تقنعُ']
+        ],
+        note: 'من أبرع ما قيل في القناعة وترويض النفس.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-211',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'أصدق بيت',
+        type: 'بيت',
+        author: 'دريد بن الصمة',
+        verses: [
+          ['وما أنا إلا من غَزيَّةَ إن غوتْ', 'غوْيتُ وإن تَرشُدْ غَزّيةُ أرشَدِ']
+        ],
+        note: 'من أبلغ ما قيل في موافقة الرجل قومه وأخيه مع معرفته بعاقبة الأمر.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-212',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الصبر والتأني',
+        type: 'بيت',
+        author: 'أبو ذؤيب الهذلي',
+        verses: [
+          ['وتجلّدي للشامتين أُريهمُ', 'أني لريبِ الدهرِ لا أتضعضعُ'],
+          ['حتى كأني للحوادثِ مروةٌ', 'بصفا المشقَّرِ كلَّ يومٍ تُقرعُ']
+        ],
+        note: 'اختاره الأصمعي بوصفه أحسن ما قيل في الصبر مع الشرح والتصوير.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-213',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الصبر والتأني',
+        type: 'حكمة',
+        author: 'أمثال العرب والحكماء',
+        text: '«الصبر مظنّة النصر»، «الصبر مطية لا تكبو»، «حيلة من لا حيلة له الصبر»، وقول المرار الفقعسي: «وبُعدُ الأرضِ يقطعه النزولُ»، والقطامي: «قد يُدركُ المتأنِّي بعضَ حاجتهِ / وقد يكونُ مع المستعجلِ الزللُ».',
+        note: 'جوامع الحكم والأمثال في فضل الصبر والتأني في المسير والأمور.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-214',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الحلم والعفو',
+        type: 'حكمة',
+        author: 'معاوية بن أبي سفيان',
+        text: '«إني لأرفع نفسي أن يكون ذنبٌ أوزنَ من حِلمي، وما غضبي على من أملك أو ما غضبي على من لا أملك!»؛ وقيل: «الحلم عقال الشر» و«الحليم مطيّة الجهول».',
+        note: 'من أبلغ معاني الحلم وضبط النفس مع القدرة.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-215',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الحلم والعفو',
+        type: 'بيت',
+        author: 'الخليل بن أحمد الفراهيدي',
+        verses: [
+          ['سألزمُ نفسي الصفحَ عن كلِّ مُذنبٍ', 'وإن كثرتْ منهُ عليَّ الجرائمُ'],
+          ['وما الناسُ إلا واحدٌ من ثلاثةٍ', 'شريفٌ ومشروفٌ ومثلٌ مُقاومُ']
+        ],
+        note: 'قسم الخليل الناس في الحلم ثلاثة أقسام ثم فسر التعامل مع كل قسم فأحسن ولم يدع مزيداً.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-216',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'العقل والحزم',
+        type: 'حكمة',
+        author: 'أمثال العرب',
+        text: '«إن ترد الماء بماءٍ أكيس»، «لا يرسل الساق إلا ممسكاً ساقاً»، «إذا ضاق صدر المرء عن سر نفسه / فصدر الذي يستودع السر أضيق»، «لا تحمدن امرأً حتى تجربه».',
+        note: 'مجموعة من أحزم أمثال العرب في الاحتياط وكتمان السر وتجربة الرجال.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-217',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'العلم والبيان',
+        type: 'شاهد',
+        author: 'علي بن أبي طالب رضي الله عنه (حديثه لكميل)',
+        text: '«يا كميل، العلم خيرٌ من المال، العلم يحرسك وأنت تحرس المال، والمال تنقصه النفقة، والعلم يزكو على الإنفاق... مات خُزّان المال، والعلماء باقون ما بقي الدهر، أعيانهم مفقودة، وأمثالهم في القلوب موجودة».',
+        note: 'أورده العسكري مسنداً، وعدّه أبلغ ما جاء في مدح العلم وعدّ خصاله.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-218',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'العلم والبيان',
+        type: 'شاهد',
+        author: 'الحديث النبوي الشريف',
+        text: 'قال رسول الله ﷺ: «إن من البيان لسحراً، وإن من الشعر لحكمةً»، وقال ﷺ: «العلم خزائن مفتاحها السؤال»، وقال ابن عباس: أدركت العلم «بلسان سؤول وقلب عقول».',
+        note: 'شواهد نبوية وأثرية في قيمة البيان وطلب العلم.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-219',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'العلم والبيان',
+        type: 'فائدة',
+        author: 'أبو هلال العسكري',
+        text: '«اللسان كلما قُلِّب وأدير بالقول كان أطلق له»، وذكر أن أحد الفتيان كان يعمد كل يوم إلى خمسين ورقة من كتب الجاحظ فيقرؤها برفع صوت حتى صار ذليق اللسان.',
+        note: 'فائدة عملية في تمرين اللسان على الفصاحة والبيان.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-220',
+        chapterId: 'ch2',
+        chapterTitle: 'الباب الثاني: خصال الإنسان المحمودة',
+        topic: 'الحلم والعفو',
+        type: 'بيت',
+        author: 'معن بن أوس المزني',
+        verses: [
+          ['وذي رحمٍ قلّمتُ أظفارَ ضِغنِهِ', 'بحِلميَ عنهُ وهو ليس لهُ حِلْمُ'],
+          ['فما زلتُ في لِينٍ لهُ وتعطّفٍ', 'عليهِ كما تحنو على الولدِ الأمُّ']
+        ],
+        note: 'فضّله عبد الملك بن مروان على سائر الشعراء في استلال الضغن بالحلم وصلة الرحم.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+
+      // الباب الثالث: المعاتبات والهجاء والاعتذار
+      {
+        id: 'ex-301',
+        chapterId: 'ch3',
+        chapterTitle: 'الباب الثالث: المعاتبات والهجاء والاعتذار',
+        topic: 'المعاتبات والشكوى',
+        type: 'شاهد',
+        author: 'الحديث النبوي الشريف',
+        text: 'روى المدائني عن رسول الله ﷺ أنه قال لطلحة حين رأى تلوناً عليه: «فراقٌ جميلٌ خيرٌ من صحبةٍ على دَخَن»؛ والدخن والدخل: الفساد.',
+        note: 'أول ما افتتح به العسكري باب المعاتبات.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-302',
+        chapterId: 'ch3',
+        chapterTitle: 'الباب الثالث: المعاتبات والهجاء والاعتذار',
+        topic: 'المعاتبات والشكوى',
+        type: 'بيت',
+        author: 'أبو ذؤيب الهذلي',
+        verses: [
+          ['فنفسَكَ فاحفظها ولا تُبْدِ للعدى', 'من السرِّ ما يُطوَى عليهِ ضميرُها'],
+          ['يُرى ناصحاً فيما بدا فإذا خلا', 'فذلك سكينٌ على الحلقِ حاذقُ']
+        ],
+        note: 'في التحذير من الخداع في المودة ومعاتبة الصديق الغادر.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-303',
+        chapterId: 'ch3',
+        chapterTitle: 'الباب الثالث: المعاتبات والهجاء والاعتذار',
+        topic: 'المعاتبات والشكوى',
+        type: 'بيت',
+        author: 'جميل بثينة',
+        verses: [
+          ['لَحَى اللَّهُ مَن لا ينفعُ الودُّ عندَهُ', 'ومَن حبلُهُ إنْ مُدَّ غيرُ متينِ'],
+          ['ومَن هو عند العينِ أمّا لقاؤُهُ', 'فحلوٌ وأمّا غيبُهُ فظنونُ']
+        ],
+        note: 'من قديم العتاب الممزوج بالشكوى.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+      {
+        id: 'ex-304',
+        chapterId: 'ch3',
+        chapterTitle: 'الباب الثالث: المعاتبات والهجاء والاعتذار',
+        topic: 'المعاتبات والشكوى',
+        type: 'حكمة',
+        author: 'من كلام الكتّاب والشعراء',
+        text: '«وليس بمُغنٍ في المودّةِ شافعٌ / إذا لم يكن بينَ الضلوعِ شفيعُ»، و«لا خيرَ في ودِّ امرئٍ متكارهٍ / عليكَ ولا في صاحبٍ لا توافقُه».',
+        note: 'بيتان جاريان مجرى الأمثال في أن المودة لا تُستجلب بالإكراه.',
+        sourceUrl: 'https://ddl.ae/uploads/books/234.html'
+      },
+
+      // الباب الرابع: التشبب وأوصاف الحسان
+      {
+        id: 'ex-401',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'التشبب والشوق',
+        type: 'بيت',
+        author: 'امرؤ القيس',
+        verses: [
+          ['وما ذرفت عيناكِ إلا لتضربي', 'بسهميكِ في أعشارِ قلبٍ مقتَّلِ']
+        ],
+        note: 'أرقّ بيت قالته العرب؛ شبه عينيها بسهمين يضربان في قلب مكسّر مذلّل.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-402',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'التشبب والشوق',
+        type: 'بيت',
+        author: 'أبو نواس',
+        verses: [
+          ['ما يرجعُ الطرفُ عنها حينَ أبصرها', 'حتى يعودَ إليها القلبُ مشتاقا']
+        ],
+        note: 'عدّه العسكري من أبلغ ما قيل في دوام الشوق وتجدده.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-403',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'التشبب والشوق',
+        type: 'بيت',
+        author: 'بعض الشعراء / وأبو هلال العسكري',
+        verses: [
+          ['اللهُ يعلمُ أنّي لستُ أذكرهُ', 'وكيفَ يذكرهُ مَن ليسَ ينساهُ؟']
+        ],
+        note: 'أجود ما قيل في التذكر على البعد، وزاده العسكري بقوله: «هل يعرض الذكر إلا بعد نسيان؟».',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-404',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'التشبب والشوق',
+        type: 'بيت',
+        author: 'وضاح اليمن',
+        verses: [
+          ['واسقطْ علينا كسقوطِ الندى', 'ليلةَ لا ناهٍ ولا زاجرُ']
+        ],
+        note: 'قال العسكري: هذا أبلغ من تشبيه امرئ القيس بحباب الماء؛ لأن سقوط الندى لا صوت له.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-405',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'التشبب والشوق',
+        type: 'شاهد',
+        author: 'الحديث النبوي الشريف',
+        text: 'استشهد العسكري في باب حسن الحبيب في عين المحبوب بقول النبي ﷺ: «حبّك الشيءَ يعمي ويصمّ».',
+        note: 'شاهد نبوي ربطه العسكري بقول عمر بن أبي ربيعة.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-406',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'صفة النساء والعيون',
+        type: 'بيت',
+        author: 'جرير',
+        verses: [
+          ['إنّ العيونَ التي في طرفها حوَرٌ', 'قتلْننا ثم لم يحيينَ قتلانا'],
+          ['يصرعنَ ذا اللبِّ حتى لا حراكَ به', 'وهنَّ أضعفُ خلقِ اللهِ أركانا']
+        ],
+        note: 'من أشهر ما قيل في العيون، وقد تداوله المحدثون وأخذوه.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-407',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'صفة النساء والعيون',
+        type: 'بيت',
+        author: 'ابن الرومي',
+        verses: [
+          ['نظرتْ فأقصدتِ الفؤادَ بسهمها', 'ثم انثنتْ عنهُ فكادَ يهيمُ'],
+          ['ويلاهُ إن نظرتْ وإن هي أعرضتْ', 'وقعُ السهامِ ونزعهنَّ أليمُ']
+        ],
+        note: 'من أحسن ما قيل في النظر والإعراض.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-408',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'بياض الثغر',
+        type: 'بيت',
+        author: 'البحتري',
+        verses: [
+          ['ولما التقينا والتقى موعدٌ لنا', 'تبينَ رامي الدرِّ منا ولاقطهْ'],
+          ['فمن برَدٍ تجلوه عند ابتسامها', 'ومن لؤلؤٍ عند الحديثِ تساقطهْ']
+        ],
+        note: 'من أبدع ما قيل في الثغر وجمال الحديث.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-409',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'بياض الثغر',
+        type: 'بيت',
+        author: 'ابن المعتز',
+        verses: [
+          ['وحديثُها السحرُ الحلالُ لو أنَّهُ', 'لم يجنِ قتلَ المسلمِ المتحرزِ'],
+          ['إن طالَ لم يُمللْ وإن هي أوجزتْ', 'ودَّ المحدَّثُ أنها لم تُوجزِ']
+        ],
+        note: 'قال العسكري: الناس شبهوا الحديث بالعسل، وزاد ابن المعتز هذه الزيادة فأحسن غاية الإحسان.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-410',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'بياض الثغر',
+        type: 'بيت',
+        author: 'بشار بن برد',
+        verses: [
+          ['ماءُ الصبابةِ نارُ الشوقِ تحدرُهُ', 'فهل سمعتم بماءٍ فاضَ من نارِ؟']
+        ],
+        note: 'من البديع في وصف الدمع، وأضاف العسكري: «والعود يقطر ماءً حيث يحترق».',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-411',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'الخيال والفراق',
+        type: 'بيت',
+        author: 'العباس بن الأحنف',
+        verses: [
+          ['هي الشمسُ مسكنُها في السماءِ', 'فعزِّ الفؤادَ عزاءً جميلا'],
+          ['فلن تستطيعَ إليها الصعودَ', 'ولن تستطيعَ إليكَ النزولا']
+        ],
+        note: 'قال دعبل: لا أعرف أحسن من شعر العباس بن الأحنف في الشمس وبُعد الحبيب.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-412',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'الخيال والفراق',
+        type: 'بيت',
+        author: 'أبو تمام',
+        verses: [
+          ['يا لها ليلةً تزاورتِ الأر', 'واحُ فيها سراً من الأجسامِ'],
+          ['مجلسٌ لم يكن لنا فيه عيبٌ', 'غيرُ أنا في دعوةِ الأحلامِ']
+        ],
+        note: 'من لطائف المعاني في طيف الخيال.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+      {
+        id: 'ex-413',
+        chapterId: 'ch4',
+        chapterTitle: 'الباب الرابع: التشبب وأوصاف الحسان',
+        topic: 'الخيال والفراق',
+        type: 'حكمة',
+        author: 'بعض الكتّاب',
+        text: '«في الفراق مصافحة التسليم، ورجاء الأوبة، والسلامة من الملال، وعمارة القلب بالشوق، والدلالة على فضل المواصلة واللقاء».',
+        note: 'من جيد ما مُدح به الفراق في النثر.',
+        sourceUrl: 'https://alantologia.com/page/15796/'
+      },
+
+      // الباب الخامس: صفات النار والطعام والشراب
+      {
+        id: 'ex-501',
+        chapterId: 'ch5',
+        chapterTitle: 'الباب الخامس: النار والطعام والشراب',
+        topic: 'ألوان الطعام',
+        type: 'فائدة',
+        author: 'أبو هلال العسكري',
+        text: 'العرب تشبّه البُرّ بقُراضة الذهب وبمناقير النغران (والنغران جمع نُغَرَة).',
+        note: 'فائدة لغوية وتشبيهية من مفتتح الفصل الثاني في ذكر ألوان الطعام.',
+        sourceUrl: 'https://ablibrary.net/book_content/b/14322/563?lang=fa'
+      },
+      {
+        id: 'ex-502',
+        chapterId: 'ch5',
+        chapterTitle: 'الباب الخامس: النار والطعام والشراب',
+        topic: 'ألوان الطعام',
+        type: 'بيت',
+        author: 'ابن ضرار (أخو الشماخ)',
+        verses: [
+          ['وقلتُ لبطني أبشري اليومَ إنهُ', 'حمىً آمناً مما تفيدُ وتجمعُ'],
+          ['فإن تكُ مصفوراً فهذا دواؤهُ', 'وإن تكُ جوعاناً فذا يومُ تشبعُ']
+        ],
+        note: 'أنشده الأصمعي للرشيد فضحك وقال: نحن كل يوم نشبع.',
+        sourceUrl: 'https://lib.eshia.ir/41062/1/305/%22%D8%A7%D9%84%D9%81%D8%B5%D9%84_%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%22'
+      },
+      {
+        id: 'ex-503',
+        chapterId: 'ch5',
+        chapterTitle: 'الباب الخامس: النار والطعام والشراب',
+        topic: 'ذكر الشراب',
+        type: 'بيت',
+        author: 'أبو نواس',
+        verses: [
+          ['ترى حيثما كانتْ من البيتِ مشرقاً', 'وما لم تكنْ فيه من البيتِ مغربا']
+        ],
+        note: 'عدّه العسكري من أطرف ما قيل في صفاء الشراب وإشراقه، بعد قول الأعشى: «تريك القذى من دونها وهي دونه».',
+        sourceUrl: 'https://lib.eshia.ir/41062/1/305/%22%D8%A7%D9%84%D9%81%D8%B5%D9%84_%D8%A7%D9%84%D8%AB%D8%A7%D9%84%D8%AB%22'
+      },
+
+      // الباب السابع: صفة السحاب والمطر والبرق والرعد والرياض
+      {
+        id: 'ex-701',
+        chapterId: 'ch7',
+        chapterTitle: 'الباب السابع: السحاب والمطر والرياض',
+        topic: 'السحاب والمطر',
+        type: 'بيت',
+        author: 'امرؤ القيس',
+        verses: [
+          ['ديمةٌ هطلاءُ فيها وطَفٌ', 'طَبّقَ الأرضَ تحرَّى وتَدُرْ'],
+          ['وتَرى الشجراءَ في رَيِّقِهِ', 'كرؤوسٍ قُطِّعت فيها الخُمُرْ']
+        ],
+        note: 'اختاره ذو الرمة بوصفه أشعر ما قالت الشعراء في المطر؛ وقوله «طبق الأرض» غاية في صفة عموم السحاب.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B5%D9%81%D8%A9_%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8_%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%B1_%D9%88%D8%A7%D9%84%D8%A8%D8%B1%D9%82_%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%AF_%D9%88%D8%A7%D9%84%D8%AB%D9%84%D8%AC_%D9%88%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8'
+      },
+      {
+        id: 'ex-702',
+        chapterId: 'ch7',
+        chapterTitle: 'الباب السابع: السحاب والمطر والرياض',
+        topic: 'السحاب والمطر',
+        type: 'بيت',
+        author: 'ابن الرومي',
+        verses: [
+          ['سحائبُ قيستْ بالبلادِ فأُلقيتْ', 'غِطاءً على أغوارِها ونُجودِها'],
+          ['هدتها النُّعامَى مُثقلاتٍ فأقبلتْ', 'تهادَى رُويداً سيرُها كركودِها']
+        ],
+        note: 'قال العسكري: لم يأخذ أحد معنى امرئ القيس فأجاده كإجادة ابن الرومي، وقوله «سيرها كركودها» غاية في وصف ثقلها بالماء.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B5%D9%81%D8%A9_%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8_%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%B1_%D9%88%D8%A7%D9%84%D8%A8%D8%B1%D9%82_%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%AF_%D9%88%D8%A7%D9%84%D8%AB%D9%84%D8%AC_%D9%88%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8'
+      },
+      {
+        id: 'ex-703',
+        chapterId: 'ch7',
+        chapterTitle: 'الباب السابع: السحاب والمطر والرياض',
+        topic: 'السحاب والمطر',
+        type: 'فائدة',
+        author: 'أعرابي من عامر بن صعصعة (رواية الأصمعي)',
+        text: '«نشأ عارضاً فطلع ناهضاً، ثم ابتسم وامضاً... ثم ارتجز فهمهم، ثم دوي فأظلم، فأركّ ودثّ وبغش، ثم قطقط فأفرط، ثم ديّم فأغمط، ثم ركد فأجثم، ثم وبل فسحّ وجاد، فأنعم فقمس الربى، وأفرط الزبى سبعاً تباعاً، لا يريد انقشاعاً، حتى ارتوت الحزون، وتضحضحت المتون».',
+        note: 'من أبلغ نثر الأعراب في تدرج درجات المطر، ومنه المثل: «بلغ السيل الزبى».',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B5%D9%81%D8%A9_%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8_%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%B1_%D9%88%D8%A7%D9%84%D8%A8%D8%B1%D9%82_%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%AF_%D9%88%D8%A7%D9%84%D8%AB%D9%84%D8%AC_%D9%88%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8'
+      },
+      {
+        id: 'ex-704',
+        chapterId: 'ch7',
+        chapterTitle: 'الباب السابع: السحاب والمطر والرياض',
+        topic: 'السحاب والمطر',
+        type: 'بيت',
+        author: 'طرفة بن العبد',
+        verses: [
+          ['فسقى بلادكَ غيرَ مُفسِدِها', 'صوبُ الربيعِ ودِيمةٌ تهمي']
+        ],
+        note: 'استحسنه العسكري في الدعاء بالسقيا مع التقييد بـ«غير مفسدها» بخلاف من أطلق الدعاء بدوام القطر.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B5%D9%81%D8%A9_%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8_%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%B1_%D9%88%D8%A7%D9%84%D8%A8%D8%B1%D9%82_%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%AF_%D9%88%D8%A7%D9%84%D8%AB%D9%84%D8%AC_%D9%88%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8'
+      },
+      {
+        id: 'ex-705',
+        chapterId: 'ch7',
+        chapterTitle: 'الباب السابع: السحاب والمطر والرياض',
+        topic: 'البرق والرعد والرياض',
+        type: 'بيت',
+        author: 'ابن مطير',
+        verses: [
+          ['مستضحِكٌ بلوامعٍ مستعبرٌ', 'بمدامعٍ لم تَمرِها الأقذاءُ'],
+          ['فله بلا حزنٍ ولا بمسرةٍ', 'ضحكٌ يؤلفُ بينهُ وبكاءُ']
+        ],
+        note: 'أجود ما قيل في السحاب الجامع بين البرق (الضحك) والمطر (البكاء).',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B5%D9%81%D8%A9_%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8_%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%B1_%D9%88%D8%A7%D9%84%D8%A8%D8%B1%D9%82_%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%AF_%D9%88%D8%A7%D9%84%D8%AB%D9%84%D8%AC_%D9%88%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8'
+      },
+      {
+        id: 'ex-706',
+        chapterId: 'ch7',
+        chapterTitle: 'الباب السابع: السحاب والمطر والرياض',
+        topic: 'البرق والرعد والرياض',
+        type: 'بيت',
+        author: 'ابن المعتز',
+        verses: [
+          ['وكأنما حصباءُ أرضكِ جَوْهَرٌ', 'وكأن ماءَ الوردِ دمعُ نداكِ'],
+          ['وكأن دِرعاً مُفرَغاً من فِضّةٍ', 'ماءُ الغديرِ جرَتْ عليهِ صَباكِ']
+        ],
+        note: 'من أحسن أبيات قيلت في صفة دارٍ ورياضٍ وغدير.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B5%D9%81%D8%A9_%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8_%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%B1_%D9%88%D8%A7%D9%84%D8%A8%D8%B1%D9%82_%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%AF_%D9%88%D8%A7%D9%84%D8%AB%D9%84%D8%AC_%D9%88%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8'
+      },
+      {
+        id: 'ex-707',
+        chapterId: 'ch7',
+        chapterTitle: 'الباب السابع: السحاب والمطر والرياض',
+        topic: 'البرق والرعد والرياض',
+        type: 'بيت',
+        author: 'أبو فراس الحمداني',
+        verses: [
+          ['انظرْ إلى الزهرِ البديعِ', 'والماءِ في برَكِ الربيعِ'],
+          ['وإذا الرياحُ جرتْ عليهِ', 'في الذهابِ وفي الرجوعِ'],
+          ['نثرتْ على بيضِ الصفا', 'ئحِ حَلَقَ الدُّرُوعِ']
+        ],
+        note: 'تشبيه بديع لتجعّد صفحة الماء تحت النسيم بحلق الدروع.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B5%D9%81%D8%A9_%D8%A7%D9%84%D8%B3%D8%AD%D8%A7%D8%A8_%D9%88%D8%A7%D9%84%D9%85%D8%B7%D8%B1_%D9%88%D8%A7%D9%84%D8%A8%D8%B1%D9%82_%D9%88%D8%A7%D9%84%D8%B1%D8%B9%D8%AF_%D9%88%D8%A7%D9%84%D8%AB%D9%84%D8%AC_%D9%88%D8%A7%D9%84%D8%B6%D8%B1%D9%8A%D8%A8'
+      }
+      ,
+      // الباب السادس: وصف السماء والنجوم والليل والصبح
+      {
+        id: 'ex-601',
+        chapterId: 'ch6',
+        chapterTitle: 'الباب السادس: وصف السماء والنجوم والليل والصبح',
+        topic: 'ظلمة الليل',
+        type: 'شاهد',
+        author: 'القرآن الكريم — سورة النور',
+        text: '﴿أَوْ كَظُلُمَاتٍ فِي بَحْرٍ لُّجِّيٍّ يَغْشَاهُ مَوْجٌ مِّن فَوْقِهِ مَوْجٌ مِّن فَوْقِهِ سَحَابٌ ظُلُمَاتٌ بَعْضُهَا فَوْقَ بَعْضٍ﴾',
+        note: 'قال أبو هلال العسكري: هو من أتم أوصاف الظلمة الذي ليس في كلام البشر مثله.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%B8%D9%84%D9%85%D8%A9_%D8%A7%D9%84%D9%84%D9%8A%D9%84_%D9%88%D8%B7%D9%88%D9%84%D9%87_%D9%88%D9%82%D8%B5%D8%B1%D9%87'
+      },
+      {
+        id: 'ex-602',
+        chapterId: 'ch6',
+        chapterTitle: 'الباب السادس: وصف السماء والنجوم والليل والصبح',
+        topic: 'ظلمة الليل',
+        type: 'بيت',
+        author: 'ذو الرمة',
+        verses: [
+          ['وليلٍ كجلبابِ العروسِ ادرعتهُ', 'بأربعةٍ والشخصُ في العينِ واحدُ'],
+          ['أحمُّ علافيٌّ وأبيضُ صارمٌ', 'وأعيسُ مهريٌّ وأروعُ ماجدُ']
+        ],
+        note: 'استهلال العسكري لباب ذكر ظلمة الليل، وتبعه ابن المعتز بقوله: «وليلٍ كجلبابِ الشبابِ قطعتهُ»، وفضّل العسكري لفظ «جلباب الشباب».',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%B8%D9%84%D9%85%D8%A9_%D8%A7%D9%84%D9%84%D9%8A%D9%84_%D9%88%D8%B7%D9%88%D9%84%D9%87_%D9%88%D9%82%D8%B5%D8%B1%D9%87'
+      },
+      {
+        id: 'ex-603',
+        chapterId: 'ch6',
+        chapterTitle: 'الباب السادس: وصف السماء والنجوم والليل والصبح',
+        topic: 'طول الليل',
+        type: 'بيت',
+        author: 'امرؤ القيس',
+        verses: [
+          ['وليلٍ كموجِ البحرِ أرخى سدولَهُ', 'عليَّ بأنواعِ الهمومِ ليبتلي'],
+          ['فقلتُ لهُ لمّا تمطّى بصلبهِ', 'وأردفَ أعجازاً وناءَ بكلكلِ'],
+          ['ألا أيها الليلُ الطويلُ ألا انجلِ', 'بصبحٍ وما الإصباحُ منك بأمثلِ']
+        ],
+        note: 'عدّه العسكري من أفصح الكلام وأبرعه في طول الليل؛ وفسّر مساواة الصبح بالليل بأنه دخل في باب الغلو على شدة الوجد.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%B8%D9%84%D9%85%D8%A9_%D8%A7%D9%84%D9%84%D9%8A%D9%84_%D9%88%D8%B7%D9%88%D9%84%D9%87_%D9%88%D9%82%D8%B5%D8%B1%D9%87'
+      },
+      {
+        id: 'ex-604',
+        chapterId: 'ch6',
+        chapterTitle: 'الباب السادس: وصف السماء والنجوم والليل والصبح',
+        topic: 'طول الليل',
+        type: 'بيت',
+        author: 'النابغة الذبياني',
+        verses: [
+          ['كليني لهمٍّ يا أميمةُ ناصبِ', 'وليلٍ أقاسيهِ بطيءِ الكواكبِ'],
+          ['وصدرٍ أراحَ الليلُ عازبَ همّهِ', 'تضاعفَ فيه الحزنُ من كلِّ جانبِ']
+        ],
+        note: 'أشار العسكري إلى أن النابغة أول من ذكر أن الهموم تتزايد بالليل، فشبهها بالنعم العازبة تريحها الرعاة ليلاً.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%B8%D9%84%D9%85%D8%A9_%D8%A7%D9%84%D9%84%D9%8A%D9%84_%D9%88%D8%B7%D9%88%D9%84%D9%87_%D9%88%D9%82%D8%B5%D8%B1%D9%87'
+      },
+      {
+        id: 'ex-605',
+        chapterId: 'ch6',
+        chapterTitle: 'الباب السادس: وصف السماء والنجوم والليل والصبح',
+        topic: 'طول الليل والسهر',
+        type: 'بيت',
+        author: 'بشار بن برد',
+        verses: [
+          ['لم يطلْ ليلي ولكنْ لم أنمْ', 'ونفى عنّي الكرى طيفٌ ألمّ']
+        ],
+        note: 'قال العسكري: أنبأ بشار عن العلة التي يُستطال لها الليل وهو السهر، وجعل الهجر كشخص ماثل كلما أبصره النوم نفر.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%B8%D9%84%D9%85%D8%A9_%D8%A7%D9%84%D9%84%D9%8A%D9%84_%D9%88%D8%B7%D9%88%D9%84%D9%87_%D9%88%D9%82%D8%B5%D8%B1%D9%87'
+      },
+      {
+        id: 'ex-606',
+        chapterId: 'ch6',
+        chapterTitle: 'الباب السادس: وصف السماء والنجوم والليل والصبح',
+        topic: 'الاستعارة في الليل',
+        type: 'بيت',
+        author: 'أبو تمام',
+        verses: [
+          ['إليكَ هتكنا جنحَ ليلٍ كأنّهُ', 'قدِ اكتحلتْ منهُ البلادُ بإثمدِ']
+        ],
+        note: 'موازنة نقدية: أخذه من قول أبي نواس «وجنح الليل مكتحل بقار»، وقول أبي تمام أجود لأن الاكتحال بالإثمد لا بالقار.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%B8%D9%84%D9%85%D8%A9_%D8%A7%D9%84%D9%84%D9%8A%D9%84_%D9%88%D8%B7%D9%88%D9%84%D9%87_%D9%88%D9%82%D8%B5%D8%B1%D9%87'
+      },
+
+      // الباب التاسع: صفة الخط والقلم والدواة والقرطاس
+      {
+        id: 'ex-901',
+        chapterId: 'ch9',
+        chapterTitle: 'الباب التاسع: صفة الخط والقلم والدواة والقرطاس',
+        topic: 'فضل الخط',
+        type: 'شاهد',
+        author: 'علي بن أبي طالب رضي الله عنه',
+        text: 'الخط الحسن يزيد الحق وضوحاً.',
+        note: 'أورده العسكري في سياق شواهد شرف الخط وجودته، وذكر معها قولهم: «حسن الخط إحدى البلاغتين».',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%A7%D9%84%D8%AE%D8%B7_%D9%88%D8%A7%D9%84%D9%82%D9%84%D9%85_%D9%88%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A9_%D9%88%D8%A7%D9%84%D9%82%D8%B1%D8%B7%D8%A7%D8%B3'
+      },
+      {
+        id: 'ex-902',
+        chapterId: 'ch9',
+        chapterTitle: 'الباب التاسع: صفة الخط والقلم والدواة والقرطاس',
+        topic: 'فضل الخط',
+        type: 'حكمة',
+        author: 'جعفر بن يحيى البرمكي',
+        text: 'الخط سمط الحكمة به يفصل شذورها، وينظم منثورها.',
+        note: 'ونقل العسكري عن عبيد الله بن العباس العلوي قوله: «الخط لسان اليد».',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%A7%D9%84%D8%AE%D8%B7_%D9%88%D8%A7%D9%84%D9%82%D9%84%D9%85_%D9%88%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A9_%D9%88%D8%A7%D9%84%D9%82%D8%B1%D8%B7%D8%A7%D8%B3'
+      },
+      {
+        id: 'ex-903',
+        chapterId: 'ch9',
+        chapterTitle: 'الباب التاسع: صفة الخط والقلم والدواة والقرطاس',
+        topic: 'وصف الكتاب',
+        type: 'فائدة',
+        author: 'الجاحظ',
+        text: 'الكتاب وعاءٌ ملئ علماً، وظرفٌ حشي ظرفاً، وإناءٌ شحن مزاحاً وجدّاً؛ إن شئت كان أبين من سحبان وائل، وإن شئت كان أعيا من باقل، ومن لك بشيء يجمع الأول والآخر، والناقص والوافر، والشاهد والغائب.',
+        note: 'من أجمع ما قيل في وصف الكتاب ونفعه.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%A7%D9%84%D8%AE%D8%B7_%D9%88%D8%A7%D9%84%D9%82%D9%84%D9%85_%D9%88%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A9_%D9%88%D8%A7%D9%84%D9%82%D8%B1%D8%B7%D8%A7%D8%B3'
+      },
+      {
+        id: 'ex-904',
+        chapterId: 'ch9',
+        chapterTitle: 'الباب التاسع: صفة الخط والقلم والدواة والقرطاس',
+        topic: 'القلم والخط',
+        type: 'بيت',
+        author: 'أبو هلال العسكري',
+        verses: [
+          ['الكتبُ عُقلُ شواردِ الكلمِ', 'والخطُّ خيطُ فرائدِ الحكمِ'],
+          ['بالخطِّ نُظّمَ كلُّ منتثرٍ', 'منها وفُصِّلَ كلُّ مُنتظمِ'],
+          ['والسيفُ وهو بحيثُ تعرفهُ', 'فرضٌ عليهِ عبادةُ القلمِ']
+        ],
+        note: 'نظم العسكري في معنى حكمة جعفر بن يحيى في الخط، مع تغليب القلم على السيف.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%A7%D9%84%D8%AE%D8%B7_%D9%88%D8%A7%D9%84%D9%82%D9%84%D9%85_%D9%88%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A9_%D9%88%D8%A7%D9%84%D9%82%D8%B1%D8%B7%D8%A7%D8%B3'
+      },
+      {
+        id: 'ex-905',
+        chapterId: 'ch9',
+        chapterTitle: 'الباب التاسع: صفة الخط والقلم والدواة والقرطاس',
+        topic: 'وصف القلم',
+        type: 'بيت',
+        author: 'أبو تمام',
+        verses: [
+          ['لكَ القلمُ الأعلى الذي بشباتهِ', 'تُنالُ من الأمرِ الكُلى والمفاصلُ'],
+          ['فصيحٌ إذا استنطقتهُ وهو راكبٌ', 'وأعجمُ إن خاطبتهُ وهو راجلُ']
+        ],
+        note: 'من أبدع ما وُصف به القلم في يد الكاتب إذا تحرك على القرطاس.',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%A7%D9%84%D8%AE%D8%B7_%D9%88%D8%A7%D9%84%D9%82%D9%84%D9%85_%D9%88%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A9_%D9%88%D8%A7%D9%84%D9%82%D8%B1%D8%B7%D8%A7%D8%B3'
+      },
+      {
+        id: 'ex-906',
+        chapterId: 'ch9',
+        chapterTitle: 'الباب التاسع: صفة الخط والقلم والدواة والقرطاس',
+        topic: 'القلم والسيف',
+        type: 'بيت',
+        author: 'ابن الرومي',
+        verses: [
+          ['لعمرُكَ ما السيفُ سيفُ الكميِّ', 'بأخوفَ من قلمِ الكاتبِ'],
+          ['أداةُ المنيّةِ في جانبٍ', 'وسيفُ المنيّةِ في جانبِ']
+        ],
+        note: 'رد به ابن الرومي على قول أبي تمام «السيف أصدق أنباءً من الكتب» بقوله: «إن السيوف لها مذ أرهفت خدم».',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%A7%D9%84%D8%AE%D8%B7_%D9%88%D8%A7%D9%84%D9%82%D9%84%D9%85_%D9%88%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A9_%D9%88%D8%A7%D9%84%D9%82%D8%B1%D8%B7%D8%A7%D8%B3'
+      },
+      {
+        id: 'ex-907',
+        chapterId: 'ch9',
+        chapterTitle: 'الباب التاسع: صفة الخط والقلم والدواة والقرطاس',
+        topic: 'شروط جودة الخط',
+        type: 'فائدة',
+        author: 'أبو هلال العسكري',
+        text: 'سُئل بعض الكتّاب عن الخط متى يستحق أن يوصف بالجودة؟ فقال: إذا اعتدلت أقسامه، وطالت ألفه ولامه، واستقامت سطوره، وتفتحت عيونه، وأشرق قرطاسه وأظلمت أنقاسه، وتناسب دقيقه وجليله، وأسرع في العيون تصوره، وإلى العقول تثمره.',
+        note: 'ونبّه العسكري إلى أن المتنبي أخذ بيته «أنا الذي نظر الأعمى إلى أدبي» من وصف الشاعر للخط: «حروفاً تعيد لعين الكليل نشاطاً ويقرؤها الأخفش».',
+        sourceUrl: 'https://xn--igbhe1a7h.com/wiki/%D8%AF%D9%8A%D9%88%D8%A7%D9%86_%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%86%D9%8A/%D8%B0%D9%83%D8%B1_%D8%A7%D9%84%D8%AE%D8%B7_%D9%88%D8%A7%D9%84%D9%82%D9%84%D9%85_%D9%88%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A9_%D9%88%D8%A7%D9%84%D9%82%D8%B1%D8%B7%D8%A7%D8%B3'
+      }
+    ];
+
+    // State management with safe localStorage persistence
+    const STORAGE_KEY = 'diwan_al_maani_state_v1';
+    const state = {
+      chapterId: 'all',
+      topic: 'all',
+      type: 'all',
+      collection: 'all', // 'all' | 'saved' | 'starred'
+      search: '',
+      fontSize: 18,
+      fontFamily: 'ibm',
+      savedIds: [],
+      starredIds: [],
+      readingBookmarkId: null,
+      exportSource: 'saved' // 'saved' | 'starred'
+    };
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        if ([16, 18, 20].includes(parsed.fontSize)) state.fontSize = parsed.fontSize;
+        if (['ibm', 'cairo', 'tajawal', 'readex', 'amiri'].includes(parsed.fontFamily)) state.fontFamily = parsed.fontFamily;
+        if (Array.isArray(parsed.savedIds)) state.savedIds = parsed.savedIds;
+        if (Array.isArray(parsed.starredIds)) state.starredIds = parsed.starredIds;
+        if (typeof parsed.readingBookmarkId === 'string') state.readingBookmarkId = parsed.readingBookmarkId;
+      } catch (e) {
+        // Ignore storage errors in restricted environments
+      }
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          fontSize: state.fontSize,
+          fontFamily: state.fontFamily,
+          savedIds: state.savedIds,
+          starredIds: state.starredIds,
+          readingBookmarkId: state.readingBookmarkId
+        }));
+      } catch (e) {
+        // Ignore storage errors
+      }
+    }
+
+    function normalizeArabic(str) {
+      return (str || '')
+        .replace(/[\u064B-\u065F\u0670]/g, '')
+        .replace(/[أإآ]/g, 'ا')
+        .replace(/ى/g, 'ي')
+        .replace(/ة/g, 'ه')
+        .toLowerCase();
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        el.classList.add('hidden');
+      }, 2400);
+    }
+
+    function copyTextToClipboard(text, successMsg) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(successMsg || 'تم النسخ إلى الحافظة');
+        }).catch(() => fallbackCopy(text, successMsg));
+      } else {
+        fallbackCopy(text, successMsg);
+      }
+    }
+
+    function fallbackCopy(text, successMsg) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg || 'تم النسخ إلى الحافظة');
+      } catch (e) {
+        showToast('تعذر النسخ التلقائي');
+      }
+      document.body.removeChild(ta);
+    }
+
+    function formatItemPlain(item) {
+      let content = '';
+      if (item.verses) {
+        content = item.verses.map(v => `${v[0]}  ***  ${v[1]}`).join('\n');
+      } else {
+        content = item.text || '';
+      }
+      const parts = [
+        content,
+        `— ${item.author}`,
+        `[${item.chapterTitle} • ${item.topic}]`
+      ];
+      if (item.note) parts.push(`الفائدة: ${item.note}`);
+      return parts.join('\n');
+    }
+
+    const FONT_FAMILIES = {
+      ibm: "'IBM Plex Sans Arabic', 'Cairo', Tahoma, Arial, sans-serif",
+      cairo: "'Cairo', 'IBM Plex Sans Arabic', Tahoma, Arial, sans-serif",
+      tajawal: "'Tajawal', 'IBM Plex Sans Arabic', Tahoma, Arial, sans-serif",
+      readex: "'Readex Pro', 'IBM Plex Sans Arabic', Tahoma, Arial, sans-serif",
+      amiri: "'Amiri', 'IBM Plex Sans Arabic', Georgia, serif"
+    };
+
+    function applyFontFamily() {
+      const stack = FONT_FAMILIES[state.fontFamily] || FONT_FAMILIES.ibm;
+      document.documentElement.style.setProperty('--font-body', stack);
+      document.documentElement.style.setProperty('--font-poetry', stack);
+      const sel = document.getElementById('fontFamilySelect');
+      if (sel) sel.value = state.fontFamily;
+    }
+
+    function applyFontSize() {
+      document.documentElement.style.setProperty('--reading-font-size', `${state.fontSize}px`);
+      document.querySelectorAll('.font-btn').forEach(btn => {
+        const size = Number(btn.getAttribute('data-font'));
+        if (size === state.fontSize) {
+          btn.className = 'font-btn px-2.5 py-1 text-xs font-bold rounded-md bg-[#7C2D12] text-white shadow-xs transition';
+        } else {
+          btn.className = 'font-btn px-2.5 py-1 text-xs font-semibold rounded-md text-[#5C5248] hover:bg-white/70 transition';
+        }
+      });
+    }
+
+    function getFilteredExtracts() {
+      const q = normalizeArabic(state.search.trim());
+      return EXTRACTS.filter(item => {
+        if (state.collection === 'saved' && !state.savedIds.includes(item.id)) return false;
+        if (state.collection === 'starred' && !state.starredIds.includes(item.id)) return false;
+        if (state.chapterId !== 'all' && item.chapterId !== state.chapterId) return false;
+        if (state.topic !== 'all' && item.topic !== state.topic) return false;
+        if (state.type !== 'all' && item.type !== state.type) return false;
+        if (q) {
+          const hay = normalizeArabic(
+            (item.author || '') + ' ' +
+            (item.topic || '') + ' ' +
+            (item.note || '') + ' ' +
+            (item.text || '') + ' ' +
+            (item.verses ? item.verses.flat().join(' ') : '')
+          );
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    function renderNavigation() {
+      // Collection buttons
+      document.getElementById('countAll').textContent = EXTRACTS.length;
+      document.getElementById('countSaved').textContent = state.savedIds.length;
+      document.getElementById('countStarred').textContent = state.starredIds.length;
+      document.getElementById('savedCountBadge').textContent = state.savedIds.length;
+
+      document.querySelectorAll('.collection-btn').forEach(btn => {
+        const col = btn.getAttribute('data-collection');
+        const active = col === state.collection;
+        btn.className = `collection-btn flex items-center justify-between px-3 py-2 rounded-xl text-sm font-medium transition text-right ${
+          active ? 'bg-[#7C2D12] text-white shadow-xs' : 'text-[#1F1A14] hover:bg-[#F3ECE0]'
+        }`;
+        const badge = btn.querySelector('span:last-child');
+        if (badge) {
+          badge.className = `text-xs px-2 py-0.5 rounded-full ${active ? 'bg-white/20 text-white' : 'bg-[#F3ECE0] text-[#5C5248]'}`;
+        }
+      });
+
+      // Chapter buttons
+      const nav = document.getElementById('chapterNav');
+      nav.innerHTML = CHAPTERS.map(ch => {
+        const active = ch.id === state.chapterId;
+        const count = ch.id === 'all' ? EXTRACTS.length : EXTRACTS.filter(x => x.chapterId === ch.id).length;
+        return `
+          <button type="button" data-chapter="${ch.id}" class="chapter-btn shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium transition whitespace-nowrap ${
+            active ? 'bg-[#7C2D12] text-white shadow-xs font-bold' : 'bg-white text-[#5C5248] hover:bg-[#F3ECE0] border border-[#E7DEC8]'
+          }">
+            <span class="truncate">${ch.title}</span>
+            <span class="text-[11px] px-1.5 py-0.5 rounded-md ${active ? 'bg-white/20 text-white' : 'bg-[#F3ECE0] text-[#5C5248]'}">${count}</span>
+          </button>
+        `;
+      }).join('');
+
+      // Topic pills
+      const availableItems = state.chapterId === 'all' ? EXTRACTS : EXTRACTS.filter(x => x.chapterId === state.chapterId);
+      const topics = ['all', ...new Set(availableItems.map(x => x.topic))];
+      const topicWrap = document.getElementById('topicPills');
+      topicWrap.innerHTML = topics.map(tp => {
+        const active = tp === state.topic;
+        const label = tp === 'all' ? 'كل المواضيع' : tp;
+        return `
+          <button type="button" data-topic="${tp}" class="topic-btn px-2.5 py-1 rounded-lg text-xs font-medium transition ${
+            active ? 'bg-[#B45309] text-white' : 'bg-[#F3ECE0] text-[#5C5248] hover:bg-[#E7DEC8]'
+          }">${label}</button>
+        `;
+      }).join('');
+
+      // Type filter buttons
+      document.querySelectorAll('.type-btn').forEach(btn => {
+        const t = btn.getAttribute('data-type');
+        const active = t === state.type;
+        btn.className = `type-btn px-3 py-2 rounded-xl text-xs font-semibold transition ${
+          active ? 'bg-[#7C2D12] text-white shadow-xs' : 'bg-[#F3ECE0] text-[#5C5248] hover:bg-[#E7DEC8]'
+        }`;
+      });
+    }
+
+    function updateBookmarkUI() {
+      const btn = document.getElementById('resumeReadingBtn');
+      const label = document.getElementById('resumeReadingLabel');
+      const banner = document.getElementById('bookmarkBanner');
+      const bannerText = document.getElementById('bookmarkBannerText');
+
+      const found = EXTRACTS.find(x => x.id === state.readingBookmarkId);
+      if (found) {
+        label.textContent = `العودة لمكان القراءة (${found.topic})`;
+        btn.classList.remove('opacity-70');
+        banner.classList.remove('hidden');
+        bannerText.textContent = `${found.author} — ${found.topic}`;
+      } else {
+        label.textContent = 'العودة لمكان القراءة';
+        banner.classList.add('hidden');
+      }
+    }
+
+    function typeBadgeColor(type) {
+      switch (type) {
+        case 'بيت': return 'bg-amber-50 text-amber-900 border-amber-200';
+        case 'شاهد': return 'bg-emerald-50 text-emerald-900 border-emerald-200';
+        case 'حكمة': return 'bg-sky-50 text-sky-900 border-sky-200';
+        case 'فائدة': return 'bg-rose-50 text-rose-900 border-rose-200';
+        default: return 'bg-stone-100 text-stone-800 border-stone-200';
+      }
+    }
+
+    function renderCards() {
+      const items = getFilteredExtracts();
+      const container = document.getElementById('cardsContainer');
+      const empty = document.getElementById('emptyState');
+      document.getElementById('visibleCount').textContent = items.length;
+
+      if (items.length === 0) {
+        container.innerHTML = '';
+        empty.classList.remove('hidden');
+        return;
+      }
+      empty.classList.add('hidden');
+
+      container.innerHTML = items.map(item => {
+        const isSaved = state.savedIds.includes(item.id);
+        const isStarred = state.starredIds.includes(item.id);
+        const isBookmarked = state.readingBookmarkId === item.id;
+
+        const bodyHtml = item.verses
+          ? `<div class="font-poetry reading-text space-y-2 my-2">
+              ${item.verses.map(v => `
+                <div class="poetry-bayt">
+                  <span class="text-right font-semibold">${v[0]}</span>
+                  <span class="hidden sm:inline text-[#B45309] text-sm">❖</span>
+                  <span class="text-right sm:text-left font-semibold">${v[1]}</span>
+                </div>
+              `).join('')}
+            </div>`
+          : `<p class="reading-text text-[#1F1A14] my-2 leading-relaxed">${item.text}</p>`;
+
+        return `
+          <article id="card-${item.id}" class="bg-[#FFFDF9] rounded-2xl border ${isBookmarked ? 'border-amber-500 ring-2 ring-amber-200' : 'border-[#E7DEC8]'} p-4 sm:p-5 shadow-xs transition">
+            <!-- Card Top Meta -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-bold px-2.5 py-0.5 rounded-full border ${typeBadgeColor(item.type)}">${item.type}</span>
+                <span class="text-xs font-medium text-[#7C2D12] bg-[#FAF6EE] px-2.5 py-0.5 rounded-full border border-[#E7DEC8]">${item.topic}</span>
+                <span class="text-xs text-[#5C5248] hidden sm:inline">• ${item.chapterTitle}</span>
+              </div>
+              <div class="flex items-center gap-1">
+                ${isBookmarked ? '<span class="text-[11px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md ml-1">موضع القراءة</span>' : ''}
+                <!-- Star Button -->
+                <button type="button" data-action="star" data-id="${item.id}" title="تمييز بنجمة" class="p-1.5 rounded-lg border transition ${isStarred ? 'bg-amber-100 border-amber-300 text-amber-600' : 'bg-white border-[#E7DEC8] text-[#8C7F70] hover:text-amber-600'}">
+                  <svg class="w-4 h-4" fill="${isStarred ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                  </svg>
+                </button>
+                <!-- Save Button -->
+                <button type="button" data-action="save" data-id="${item.id}" title="حفظ للتصدير" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg border text-xs font-medium transition ${isSaved ? 'bg-[#7C2D12] border-[#7C2D12] text-white' : 'bg-white border-[#E7DEC8] text-[#5C5248] hover:bg-[#F3ECE0]'}">
+                  <svg class="w-3.5 h-3.5" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                  </svg>
+                  <span>${isSaved ? 'محفوظ' : 'حفظ'}</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Author -->
+            <p class="text-sm font-bold text-[#7C2D12]">${item.author}</p>
+
+            <!-- Main Extract -->
+            ${bodyHtml}
+
+            <!-- Commentary / Note -->
+            ${item.note ? `<p class="text-xs sm:text-sm text-[#5C5248] bg-[#FAF6EE] rounded-xl px-3 py-2 border border-[#F0E8D8] mt-2">${item.note}</p>` : ''}
+
+            <!-- Card Action Footer -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mt-3 pt-3 border-t border-[#F0E8D8]">
+              <div class="flex flex-wrap items-center gap-2">
+                <!-- Copy -->
+                <button type="button" data-action="copy" data-id="${item.id}" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-[#FAF6EE] hover:bg-[#EFE6D5] text-[#1F1A14] border border-[#E7DEC8] transition">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  <span>نسخ</span>
+                </button>
+                <!-- Share -->
+                <button type="button" data-action="share" data-id="${item.id}" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium bg-[#FAF6EE] hover:bg-[#EFE6D5] text-[#1F1A14] border border-[#E7DEC8] transition">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                  </svg>
+                  <span>مشاركة</span>
+                </button>
+                <!-- Set Reading Bookmark -->
+                <button type="button" data-action="bookmark" data-id="${item.id}" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-medium border transition ${isBookmarked ? 'bg-amber-100 border-amber-300 text-amber-900' : 'bg-white border-[#E7DEC8] text-[#5C5248] hover:bg-[#FAF6EE]'}">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>${isBookmarked ? 'موضع القراءة الحالي' : 'حفظ مكان القراءة'}</span>
+                </button>
+              </div>
+              <a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer" class="text-[11px] text-[#7C2D12] hover:underline">المصدر ↗</a>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function buildMarkdownContent(sourceType) {
+      const ids = sourceType === 'starred' ? state.starredIds : state.savedIds;
+      const list = EXTRACTS.filter(x => ids.includes(x.id));
+      const title = sourceType === 'starred' ? 'المستخلصات المميزة بنجمة' : 'الفوائد المحفوظة';
+      if (list.length === 0) {
+        return `# ${title} — ديوان المعاني\n\nلا توجد عناصر في هذه القائمة بعد. قم بالضغط على زر «حفظ» أو أيقونة النجمة على أي مستخلص لإضافته هنا.`;
+      }
+
+      const lines = [
+        `# ${title} من كتاب «ديوان المعاني»`,
+        `> المؤلف: أبو هلال الحسن بن عبد الله العسكري (ت نحو ٣٩٥هـ)`,
+        `> عدد المستخلصات: ${list.length}`,
+        ''
+      ];
+
+      const grouped = {};
+      list.forEach(item => {
+        if (!grouped[item.chapterTitle]) grouped[item.chapterTitle] = [];
+        grouped[item.chapterTitle].push(item);
+      });
+
+      Object.keys(grouped).forEach(chTitle => {
+        lines.push(`## ${chTitle}`);
+        lines.push('');
+        grouped[chTitle].forEach(item => {
+          lines.push(`### ${item.topic} — ${item.author} (${item.type})`);
+          if (item.verses) {
+            item.verses.forEach(v => lines.push(`> ${v[0]}  ***  ${v[1]}`));
+          } else {
+            lines.push(`> ${item.text}`);
+          }
+          if (item.note) lines.push(`- **الفائدة:** ${item.note}`);
+          lines.push(`- **المصدر:** [رابط النص](${item.sourceUrl})`);
+          lines.push('');
+        });
+      });
+
+      return lines.join('\n');
+    }
+
+    function renderExportModal() {
+      const md = buildMarkdownContent(state.exportSource);
+      document.getElementById('markdownPreview').value = md;
+      const count = state.exportSource === 'starred' ? state.starredIds.length : state.savedIds.length;
+      document.getElementById('exportItemCount').textContent = `عدد العناصر: ${count}`;
+
+      const btnSaved = document.getElementById('exportSourceSaved');
+      const btnStarred = document.getElementById('exportSourceStarred');
+      btnSaved.className = `px-3 py-1.5 rounded-lg text-xs font-semibold transition ${state.exportSource === 'saved' ? 'bg-[#7C2D12] text-white' : 'bg-white border border-[#E7DEC8] text-[#5C5248]'}`;
+      btnStarred.className = `px-3 py-1.5 rounded-lg text-xs font-semibold transition ${state.exportSource === 'starred' ? 'bg-[#7C2D12] text-white' : 'bg-white border border-[#E7DEC8] text-[#5C5248]'}`;
+    }
+
+    function renderAll() {
+      applyFontFamily();
+      applyFontSize();
+      renderNavigation();
+      updateBookmarkUI();
+      renderCards();
+    }
+
+    function resetFilters() {
+      state.chapterId = 'all';
+      state.topic = 'all';
+      state.type = 'all';
+      state.collection = 'all';
+      state.search = '';
+      document.getElementById('searchInput').value = '';
+      renderAll();
+    }
+
+    // Dynamic Web App Manifest & PNG Icon Generation (Self-Contained PWA)
+    let deferredInstallPrompt = null;
+
+    function generateAppIconDataUrl(size) {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return '';
+
+        const r = size * 0.22;
+        const grad = ctx.createLinearGradient(0, 0, size, size);
+        grad.addColorStop(0, '#7C2D12');
+        grad.addColorStop(1, '#B45309');
+
+        ctx.beginPath();
+        ctx.moveTo(r, 0);
+        ctx.lineTo(size - r, 0);
+        ctx.quadraticCurveTo(size, 0, size, r);
+        ctx.lineTo(size, size - r);
+        ctx.quadraticCurveTo(size, size, size - r, size);
+        ctx.lineTo(r, size);
+        ctx.quadraticCurveTo(0, size, 0, size - r);
+        ctx.lineTo(0, r);
+        ctx.quadraticCurveTo(0, 0, r, 0);
+        ctx.closePath();
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        // Book emblem
+        ctx.strokeStyle = '#FFFDF9';
+        ctx.lineWidth = Math.max(4, size * 0.055);
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        const cx = size / 2;
+        const topY = size * 0.30;
+        const botY = size * 0.72;
+        const outerX = size * 0.20;
+        const dip = size * 0.055;
+
+        ctx.beginPath();
+        ctx.moveTo(cx, topY);
+        ctx.lineTo(cx, botY);
+        ctx.moveTo(cx, topY);
+        ctx.quadraticCurveTo(cx - size * 0.10, topY - dip, outerX, topY - dip);
+        ctx.lineTo(outerX, botY - dip);
+        ctx.quadraticCurveTo(cx - size * 0.10, botY - dip, cx, botY);
+        ctx.moveTo(cx, topY);
+        ctx.quadraticCurveTo(cx + size * 0.10, topY - dip, size - outerX, topY - dip);
+        ctx.lineTo(size - outerX, botY - dip);
+        ctx.quadraticCurveTo(cx + size * 0.10, botY - dip, cx, botY);
+        ctx.stroke();
+
+        return canvas.toDataURL('image/png');
+      } catch (e) {
+        return '';
+      }
+    }
+
+    function setupWebAppManifest() {
+      try {
+        const icon192 = generateAppIconDataUrl(192);
+        const icon512 = generateAppIconDataUrl(512);
+        if (icon192) {
+          const appleLink = document.getElementById('appleTouchIcon');
+          if (appleLink) appleLink.href = icon192;
+        }
+        const manifest = {
+          name: 'ديوان المعاني — أبو هلال العسكري',
+          short_name: 'ديوان المعاني',
+          description: 'مستخلصات الشواهد والأبيات والحكم والأمثال من كتاب ديوان المعاني',
+          start_url: '.',
+          display: 'standalone',
+          dir: 'rtl',
+          lang: 'ar',
+          theme_color: '#7C2D12',
+          background_color: '#FAF6EE',
+          icons: [
+            icon192 ? { src: icon192, sizes: '192x192', type: 'image/png', purpose: 'any maskable' } : null,
+            icon512 ? { src: icon512, sizes: '512x512', type: 'image/png', purpose: 'any maskable' } : null
+          ].filter(Boolean)
+        };
+        const blob = new Blob([JSON.stringify(manifest)], { type: 'application/manifest+json' });
+        const manifestLink = document.getElementById('appManifestLink');
+        if (manifestLink) manifestLink.href = URL.createObjectURL(blob);
+      } catch (e) {
+        // Ignore if environment restricts blob manifests
+      }
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      const wrap = document.getElementById('nativeInstallWrap');
+      if (wrap) wrap.classList.remove('hidden');
+    });
+
+    // Event Listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      setupWebAppManifest();
+      loadState();
+      renderAll();
+
+      // Font family selector
+      document.getElementById('fontFamilySelect').addEventListener('change', (e) => {
+        state.fontFamily = e.target.value;
+        saveState();
+        applyFontFamily();
+        showToast('تم تغيير نوع الخط');
+      });
+
+      // Font size buttons
+      document.querySelectorAll('.font-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.fontSize = Number(btn.getAttribute('data-font'));
+          saveState();
+          applyFontSize();
+          showToast(`تم ضبط حجم الخط إلى ${state.fontSize}`);
+        });
+      });
+
+      // Collection buttons
+      document.querySelectorAll('.collection-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.collection = btn.getAttribute('data-collection');
+          renderAll();
+        });
+      });
+
+      // Chapter buttons (delegated)
+      document.getElementById('chapterNav').addEventListener('click', (e) => {
+        const btn = e.target.closest('.chapter-btn');
+        if (!btn) return;
+        state.chapterId = btn.getAttribute('data-chapter');
+        state.topic = 'all';
+        renderAll();
+      });
+
+      // Topic pills (delegated)
+      document.getElementById('topicPills').addEventListener('click', (e) => {
+        const btn = e.target.closest('.topic-btn');
+        if (!btn) return;
+        state.topic = btn.getAttribute('data-topic');
+        renderAll();
+      });
+
+      // Type filters
+      document.getElementById('typeFilters').addEventListener('click', (e) => {
+        const btn = e.target.closest('.type-btn');
+        if (!btn) return;
+        state.type = btn.getAttribute('data-type');
+        renderAll();
+      });
+
+      // Search
+      document.getElementById('searchInput').addEventListener('input', (e) => {
+        state.search = e.target.value;
+        renderCards();
+      });
+
+      // Reset buttons
+      document.getElementById('resetFiltersBtn').addEventListener('click', resetFilters);
+      document.getElementById('emptyResetBtn').addEventListener('click', resetFilters);
+
+      // Card actions (delegated)
+      document.getElementById('cardsContainer').addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-action]');
+        if (!btn) return;
+        const action = btn.getAttribute('data-action');
+        const id = btn.getAttribute('data-id');
+        const item = EXTRACTS.find(x => x.id === id);
+        if (!item) return;
+
+        if (action === 'copy') {
+          copyTextToClipboard(formatItemPlain(item), 'تم نسخ المستخلص إلى الحافظة');
+        } else if (action === 'share') {
+          const shareText = formatItemPlain(item);
+          if (navigator.share) {
+            navigator.share({ title: `ديوان المعاني — ${item.topic}`, text: shareText }).catch(() => {});
+          } else {
+            document.getElementById('shareTextArea').value = shareText;
+            document.getElementById('shareWhatsappLink').href = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+            document.getElementById('shareModal').classList.remove('hidden');
+          }
+        } else if (action === 'star') {
+          if (state.starredIds.includes(id)) {
+            state.starredIds = state.starredIds.filter(x => x !== id);
+            showToast('أزيلت النجمة');
+          } else {
+            state.starredIds.push(id);
+            showToast('تم تمييز المستخلص بنجمة ★');
+          }
+          saveState();
+          renderAll();
+        } else if (action === 'save') {
+          if (state.savedIds.includes(id)) {
+            state.savedIds = state.savedIds.filter(x => x !== id);
+            showToast('أزيل من المحفوظات');
+          } else {
+            state.savedIds.push(id);
+            showToast('تم حفظ الفائدة للتصدير');
+          }
+          saveState();
+          renderAll();
+        } else if (action === 'bookmark') {
+          state.readingBookmarkId = id;
+          saveState();
+          renderAll();
+          showToast('تم حفظ مكان القراءة للعودة إليه لاحقاً');
+        }
+      });
+
+      // Resume reading button
+      document.getElementById('resumeReadingBtn').addEventListener('click', () => {
+        if (!state.readingBookmarkId) {
+          showToast('لم تحدد موضع قراءة بعد — اضغط «حفظ مكان القراءة» على أي بطاقة');
+          return;
+        }
+        const item = EXTRACTS.find(x => x.id === state.readingBookmarkId);
+        if (!item) return;
+        state.collection = 'all';
+        state.chapterId = item.chapterId;
+        state.topic = 'all';
+        state.type = 'all';
+        state.search = '';
+        document.getElementById('searchInput').value = '';
+        renderAll();
+        const card = document.getElementById(`card-${item.id}`);
+        if (card) {
+          card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          card.classList.add('bookmark-pulse');
+          setTimeout(() => card.classList.remove('bookmark-pulse'), 2300);
+        }
+      });
+
+      // Export Markdown Modal
+      document.getElementById('openExportBtn').addEventListener('click', () => {
+        state.exportSource = state.savedIds.length > 0 ? 'saved' : (state.starredIds.length > 0 ? 'starred' : 'saved');
+        renderExportModal();
+        document.getElementById('exportModal').classList.remove('hidden');
+      });
+      document.getElementById('closeExportBtn').addEventListener('click', () => {
+        document.getElementById('exportModal').classList.add('hidden');
+      });
+      document.getElementById('exportSourceSaved').addEventListener('click', () => {
+        state.exportSource = 'saved';
+        renderExportModal();
+      });
+      document.getElementById('exportSourceStarred').addEventListener('click', () => {
+        state.exportSource = 'starred';
+        renderExportModal();
+      });
+      document.getElementById('copyMarkdownBtn').addEventListener('click', () => {
+        copyTextToClipboard(document.getElementById('markdownPreview').value, 'تم نسخ محتوى Markdown');
+      });
+      document.getElementById('downloadMarkdownBtn').addEventListener('click', () => {
+        const md = document.getElementById('markdownPreview').value;
+        const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'diwan-al-maani-saved.md';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('تم تنزيل ملف Markdown');
+      });
+
+      // Share Modal
+      document.getElementById('closeShareBtn').addEventListener('click', () => {
+        document.getElementById('shareModal').classList.add('hidden');
+      });
+      document.getElementById('copyShareBtn').addEventListener('click', () => {
+        copyTextToClipboard(document.getElementById('shareTextArea').value, 'تم نسخ النص للمشاركة');
+        document.getElementById('shareModal').classList.add('hidden');
+      });
+
+      // Index Modal
+      document.getElementById('openIndexBtn').addEventListener('click', () => {
+        document.getElementById('indexModal').classList.remove('hidden');
+      });
+      document.getElementById('closeIndexBtn').addEventListener('click', () => {
+        document.getElementById('indexModal').classList.add('hidden');
+      });
+
+      // Install Web App Modal
+      document.getElementById('installAppBtn').addEventListener('click', async () => {
+        if (deferredInstallPrompt) {
+          deferredInstallPrompt.prompt();
+          await deferredInstallPrompt.userChoice;
+          deferredInstallPrompt = null;
+          const wrap = document.getElementById('nativeInstallWrap');
+          if (wrap) wrap.classList.add('hidden');
+          return;
+        }
+        document.getElementById('installModal').classList.remove('hidden');
+      });
+      document.getElementById('triggerNativeInstallBtn').addEventListener('click', async () => {
+        if (!deferredInstallPrompt) return;
+        deferredInstallPrompt.prompt();
+        await deferredInstallPrompt.userChoice;
+        deferredInstallPrompt = null;
+        document.getElementById('nativeInstallWrap').classList.add('hidden');
+        document.getElementById('installModal').classList.add('hidden');
+      });
+      document.getElementById('closeInstallBtn').addEventListener('click', () => {
+        document.getElementById('installModal').classList.add('hidden');
+      });
+      document.getElementById('closeInstallDoneBtn').addEventListener('click', () => {
+        document.getElementById('installModal').classList.add('hidden');
+      });
+
+      // Floating Back to Top Button
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      const toggleBackToTop = () => {
+        if (window.scrollY > 260) {
+          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+          backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+          backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+        }
+      };
+      window.addEventListener('scroll', toggleBackToTop, { passive: true });
+      toggleBackToTop();
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
